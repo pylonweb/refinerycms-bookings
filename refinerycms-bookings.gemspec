@@ -1,7 +1,8 @@
 # Encoding: UTF-8
+$:.push File.expand_path('../lib', __FILE__)
 require 'refinery/bookings/version'
 
-version = Refinery::bookings::Version.to_s
+version = Refinery::Bookings::Version.to_s
 
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
