@@ -2,8 +2,8 @@ module Refinery
   module Bookings
     class Version
       @major = 2
-      @minor = 4
-      @tiny  = 0
+      @minor = 0
+      @tiny  = 4
       @build = nil
 
       class << self

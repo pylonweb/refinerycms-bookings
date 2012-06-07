@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    refinerycms-bookings (2.4.0)
+    refinerycms-bookings (2.0.4)
       refinerycms-core (~> 2.0.4)
 
 GEM
