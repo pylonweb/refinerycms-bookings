@@ -1,0 +1,13 @@
+<h2><%= t('.actions') %></h2>
+<ul>
+	<li>
+		<%= link_to t('.book'), refinery.book_bookings_admin_bookings_path,
+                :id => "book_action",
+                :class => "reorder_icon" %>
+	</li>
+	<li>
+		<%= link_to t('.release'), refinery.release_bookings_admin_bookings_path,
+                :id => "release_action",
+                :class => "reorder_icon" %>
+  </li>
+</ul>

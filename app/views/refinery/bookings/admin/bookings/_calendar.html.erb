@@ -1,0 +1,11 @@
+<h2><%= t('.title') %> <%= refinery_help_tag t('.parent_page_help') %></h2>
+<div id='calendar'>
+	Loading calendar...
+</div>
+
+<% content_for :javascripts do %> 
+ <%= javascript_include_tag('refinery/bookings/datepicker') %>
+ <%= javascript_include_tag('refinery/bookings/admin/backend') %>
+<% end %>
+
+<% content_for :stylesheets, stylesheet_link_tag('refinery/bookings/backend') %>

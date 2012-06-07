@@ -1,0 +1,17 @@
+$height: 50px;
+$width: 35px;
+
+@import 'datepicker';
+
+.datepicker table {
+  width: 296px;
+  height: 161px;
+}
+
+.datepickerContainer {
+  background: #f2f2f2;
+  border: 1px solid #CCC;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+

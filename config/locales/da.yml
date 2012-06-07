@@ -1,0 +1,19 @@
+da:
+  refinery:
+    plugins:
+      bookings:
+        title: Bookinger
+    bookings:
+      admin:
+        bookings:
+          actions:
+            actions: Handlinger
+            book: Marker valgte som optaget
+            release: Frigiv valgte
+          calendar:
+            title: Bookinger
+  activerecord:
+    attributes:
+      'refinery/bookings/booking':
+        date: Dato
+        status: Status

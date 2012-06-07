@@ -1,0 +1,19 @@
+en:
+  refinery:
+    plugins:
+      bookings:
+        title: Bookings
+    bookings:
+      admin:
+        bookings:
+          actions:
+            actions: Actions
+            book: Mark selected as occupied
+            release: Release selected
+          calendar:
+            title: Bookings
+  activerecord:
+    attributes:
+      'refinery/bookings/booking':
+        date: Date
+        status: Status

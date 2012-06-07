@@ -1,0 +1,10 @@
+<%= render '/refinery/content_page' %>
+
+<div id="calendar"></div>
+
+<% content_for :javascripts do %> 
+ <%= javascript_include_tag('refinery/bookings/datepicker') %>
+ <%= javascript_include_tag('refinery/bookings/frontend') %>
+<% end %>
+
+<% content_for :stylesheets, stylesheet_link_tag('refinery/bookings/frontend') %>
