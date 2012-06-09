@@ -26,7 +26,8 @@ $(document).ready(function() {
     success: function(data, status, xhr) { 
       dateArray = []
       for (i = 0; i < data.dates.length; i++){
-        dateArray.push(new Date(data.dates[i]).valueOf());
+        date = data.dates[i].split(",");
+        dateArray.push(new Date(date[0], date[1]-1, date[2]).valueOf());
       }
       drawCalendar(dateArray, data.start_date.toString());
     }
