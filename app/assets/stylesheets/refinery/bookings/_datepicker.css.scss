@@ -1,130 +1,145 @@
 $selected_color: #22a7f2;
 $selected_color_not_in_month: #94CBF2;
 $booked_color: #ee1100;
+.datepicker {
+  text-align: center;
+  table {
+    height: 135px;
+    width: 176px;
+  }
+  .datepickerHidden {
+  	display: none;
+  }
+  table {
+  	border-collapse:collapse;
+  }
+  a {
+  	text-decoration: none;
+  	outline: none;
+  	border-bottom-style: none !important;
+  }
+  table td {
+  	text-align: center;
+  	padding: 0;
+  	margin: 0;
+  }
+  th {
+  	text-align: center;
+  	font-weight: normal;
+  }
+  tbody a {
+  	display: block;
 
-.datepicker table {
-  height: 135px;
-  width: 176px;
-}
-.datepickerHidden {
-	display: none;
-}
-div.datepicker table {
-	border-collapse:collapse;
-}
-div.datepicker a {
-	text-decoration: none;
-	outline: none;
-	text-align: center;
-	border-bottom-style: none !important;
-}
-div.datepicker table td {
-	text-align: center;
-	padding: 0;
-	margin: 0;
-}
-div.datepicker th {
-	text-align: center;
-	font-weight: normal;
-}
-div.datepicker tbody th {
-	text-align: center;
-}
-div.datepicker tbody a {
-	display: block;
-	text-align:center;
-	width: 100%;
-}
-.datepickerDays a {
-	line-height: 16px;
-	height: 16px;
-	padding-right: 2px;
-}
-.datepickerYears a,
-.datepickerMonths a{
-	width: 44px;
-	line-height: 36px;
-	height: 36px;
-	text-align: center;
-}
+  	width: 100%;
+  }
+  .datepickerDays a {
+    text-align:center;
+  	line-height: 16px;
+  	height: 16px;
+  	padding-right: 2px;
+  }
+  .datepickerYears a,
+  .datepickerMonths a{
+  	width: 44px;
+  	line-height: 36px;
+  	height: 36px;
+  	text-align: center;
+  }
 
-tbody.datepickerDays td.datepickerSelected{
-	background: $selected_color;
-	span{
-	  color: #fff;
-	} 
-}
-tbody.datepickerDays td.datepickerNotInMonth.datepickerSelected {
-	background: $selected_color_not_in_month;
-}
-tbody.datepickerYears td.datepickerSelected,
-tbody.datepickerMonths td.datepickerSelected{
-	background: $selected_color_not_in_month;
-}
-div.datepicker a:hover,
-div.datepicker a:hover {
-	color: #88c5eb;
-}
-div.datepicker td.datepickerNotInMonth a:hover {
-	color: #999;
-}
-div.datepicker {
-	text-align: center;
-}
-.datepickerSpace div {
-	width: $width;
-}
-.datepickerGoNext a,
-.datepickerGoPrev a,
-.datepickerMonth a {
-	text-align: center;
-	height: $height;
-	line-height: $height;
-}
-.datepickerGoNext a {
-	float: right;
-}
-.datepickerGoPrev a {
-	float: left;
-}
-table.datepickerViewDays tbody.datepickerMonths,
-table.datepickerViewDays tbody.datepickerYears {
-	display: none;
-}
-table.datepickerViewMonths tbody.datepickerDays,
-table.datepickerViewMonths tbody.datepickerYears,
-table.datepickerViewMonths tr.datepickerDoW {
-	display: none;
-}
-table.datepickerViewYears tbody.datepickerDays,
-table.datepickerViewYears tbody.datepickerMonths,
-table.datepickerViewYears tr.datepickerDoW {
-	display: none;
-}
-td.datepickerDisabled a,
-td.datepickerDisabled.datepickerNotInMonth a{
-	color: #333;
-}
-td.datepickerDisabled a:hover {
-	color: #333;
-}
-td.datepickerBooked a {
-	background: $booked_color;
-	span {
-	  color: #fff;
-	}
-}
-td.datepickerBooked.datepickerSelected a {
-	background: #885C79;
-}
-td.datepickerBooked.datepickerNotInMonth a {
-	background: #FC7F82;
-}
-td.datepickerBooked.datepickerNotInMonth.datepickerSelected a {
-	background: #C8A5BA;
-}
-td.datepickerNotInMonth a {
-  span{
-    color: #D0CEC0 !important;
+  tbody.datepickerDays td.datepickerSelected{
+  	background: $selected_color;
+  	span{
+  	  color: #fff;
+  	} 
+  }
+  tbody.datepickerDays td.datepickerNotInMonth.datepickerSelected {
+  	background: $selected_color_not_in_month;
+  }
+  tbody.datepickerYears td.datepickerSelected,
+  tbody.datepickerMonths td.datepickerSelected{
+  	background: $selected_color_not_in_month;
+  }
+  a:hover {
+  	color: #88c5eb;
+  }
+  td.datepickerNotInMonth a:hover {
+  	color: #999;
+  }
+  .datepickerSpace div {
+  	width: 100%;
+  }
+  .datepickerGoNext a,
+  .datepickerGoPrev a,
+  .datepickerMonth a {
+  	text-align: center;
+  	height: 100%;
+  }
+  .datepickerGoNext a {
+  	float: right;
+  	text-align: right;
+  }
+  .datepickerGoPrev a {
+  	float: left;
+  	text-align: left;
+  }
+  table.datepickerViewDays tbody.datepickerMonths,
+  table.datepickerViewDays tbody.datepickerYears {
+  	display: none;
+  }
+  table.datepickerViewMonths tbody.datepickerDays,
+  table.datepickerViewMonths tbody.datepickerYears,
+  table.datepickerViewMonths tr.datepickerDoW {
+  	display: none;
+  }
+  table.datepickerViewYears tbody.datepickerDays,
+  table.datepickerViewYears tbody.datepickerMonths,
+  table.datepickerViewYears tr.datepickerDoW {
+  	display: none;
+  }
+  td.datepickerDisabled a,
+  td.datepickerDisabled.datepickerNotInMonth a{
+  	color: #333;
+  }
+  td.datepickerDisabled a:hover {
+  	color: #333;
+  }
+  td.datepickerBooked a {
+  	background: $booked_color;
+  	span {
+  	  color: #fff;
+  	}
+  }
+  td.datepickerBooked.datepickerSelected a {
+  	background: #885C79;
+  }
+  td.datepickerBooked.datepickerNotInMonth a {
+  	background: #FC7F82;
+  }
+  td.datepickerBooked.datepickerNotInMonth.datepickerSelected a {
+  	background: #C8A5BA;
+  }
+  td.datepickerNotInMonth a {
+    span{
+      color: #D0CEC0 !important;
+    }
+  }
+  .datepickerContainer {
+    >table{
+      td:last-child{
+        .datepickerGoNext{
+          visibility: visible;
+        }
+      }
+
+      td:first-child{
+        .datepickerGoPrev{
+          visibility: visible;
+        }
+      }
+
+      .datepickerGoPrev, .datepickerGoNext{
+        visibility: hidden;
+      }
+    }
   }
 }
