@@ -15,7 +15,6 @@
 				days: 'datepickerViewDays'
 			},
 			tpl = {
-        // wrapper: '<div class="datepicker"><div class="datepickerBorderT" /><div class="datepickerBorderB" /><div class="datepickerBorderL" /><div class="datepickerBorderR" /><div class="datepickerBorderTL" /><div class="datepickerBorderTR" /><div class="datepickerBorderBL" /><div class="datepickerBorderBR" /><div class="datepickerContainer"><table cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></div></div>',
         wrapper: '<div class="datepicker"><div class="datepickerContainer"><table cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></div></div>',
 				head: [
 					'<td>',
@@ -39,7 +38,6 @@
 						'</thead>',
 					'</table></td>'
 				],
-				space : '<td class="datepickerSpace"><div></div></td>',
 				days: [
 					'<tbody class="datepickerDays">',
 						'<tr>',
@@ -125,7 +123,9 @@
 							'<td colspan="2"><a href="#"><span><%=data[11]%></span></a></td>',
 						'</tr>',
 					'</tbody>'
-				]
+				],
+				legend : '<tr><td class="datepickerLegend" colspan="<%=colspan%>"><%=legend%></td></tr>'
+				
 			},
 			defaults = {
 				flat: false,
@@ -139,6 +139,7 @@
 				format: 'Y-m-d',
 				position: 'bottom',
 				eventName: 'click',
+				legend: false,
 				onRender: function(){return {};},
 				onChange: function(){return true;},
 				onShow: function(){return true;},
@@ -443,11 +444,6 @@
 			layout = function (el) {
 				var options = $(el).data('datepicker');
 				var cal = $('#' + options.id);
-        // if (!options.extraHeight) {
-        //  var divs = $(el).find('div');
-        //  options.extraHeight = divs.get(0).offsetHeight + divs.get(1).offsetHeight;
-        //  options.extraWidth = divs.get(2).offsetWidth + divs.get(3).offsetWidth;
-        // }
 				var tbl = cal.find('table:first').get(0);
 				var width = tbl.offsetWidth;
 				var height = tbl.offsetHeight;
@@ -738,9 +734,6 @@
 						var html = '';
 						for (var i = 0; i < options.calendars; i++) {
 							cnt = options.starts;
-							if (i > 0) {
-								html += tpl.space;
-							}
 							html += tmpl(tpl.head.join(''), {
 									week: options.locale.weekMin,
 									prev: options.prev,
@@ -757,6 +750,13 @@
 						cal
 							.find('tr:first').append(html)
 								.find('table').addClass(views[options.view]);
+						if(options.legend) {
+						  legend_html = tmpl(tpl.legend, {
+						    legend: options.legend,
+						    colspan: options.calendars
+					    });
+					    cal.find('tr:first').after(legend_html)
+					  }
 						fill(cal.get(0));
 						if (options.flat) {
 							cal.appendTo(this).show().css('position', 'relative');
@@ -853,7 +853,7 @@
 		DatePickerSetDate: DatePicker.setDate,
 		DatePickerGetDate: DatePicker.getDate,
 		DatePickerClear: DatePicker.clear,
-		DatePickerLayout: DatePicker.fixLayout
+    // DatePickerLayout: DatePicker.fixLayout
 	});
 })(jQuery);
 

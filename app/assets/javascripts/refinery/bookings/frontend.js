@@ -8,6 +8,7 @@ $(document).ready(function() {
       format: 'd-m-Y',
       calendars: 2,
       mode: 'multiple',
+      legend: false,
       onRender: function(date) {
     		return {
     			disabled: true,

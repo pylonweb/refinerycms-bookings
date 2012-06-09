@@ -1,6 +1,25 @@
-<%= render '/refinery/content_page' %>
+<section class="no_side_body no_body_content_left no_body_content_right" id="body_content">
+	<h1 id="body_content_title"><%= @page.title %></h1>
+	<section id="body">
+		<div class="inner">
+			<%= raw @page.content_for(:body) %>
+			<div id="calendar"></div>
+		</div>
+	</section>
+	<% @page.parts.reject{|p| p.title == "Body"}.each do |part| %>
+		<section id="<%= part.title %>">
+			<div class="inner">
+				<%= raw @page.content_for(part.title) %>
+			</div>
+		</section>
+	<% end %>
+		
+</section>
 
-<div id="calendar"></div>
+<%# html.slice!(-1) %>
+<%#= raise html.inspect %>
+<%#= raw html.concat(['<div id="calendar"></div>', '</section>']).join() %>
+	
 
 <% content_for :javascripts do %> 
  <%= javascript_include_tag('refinery/bookings/datepicker') %>

@@ -19,7 +19,7 @@ div.datepicker a {
 	border-bottom-style: none !important;
 }
 div.datepicker table td {
-	text-align: right;
+	text-align: center;
 	padding: 0;
 	margin: 0;
 }
@@ -32,9 +32,10 @@ div.datepicker tbody th {
 }
 div.datepicker tbody a {
 	display: block;
+	text-align:center;
+	width: 100%;
 }
 .datepickerDays a {
-	width: $width;
 	line-height: 16px;
 	height: 16px;
 	padding-right: 2px;
@@ -67,7 +68,7 @@ div.datepicker a:hover {
 div.datepicker td.datepickerNotInMonth a:hover {
 	color: #999;
 }
-div.datepicker tbody th {
+div.datepicker {
 	text-align: center;
 }
 .datepickerSpace div {
@@ -82,11 +83,9 @@ div.datepicker tbody th {
 }
 .datepickerGoNext a {
 	float: right;
-	width: $width;
 }
 .datepickerGoPrev a {
 	float: left;
-	width: $width;
 }
 table.datepickerViewDays tbody.datepickerMonths,
 table.datepickerViewDays tbody.datepickerYears {
