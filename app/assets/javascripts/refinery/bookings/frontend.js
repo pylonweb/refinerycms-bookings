@@ -8,7 +8,7 @@ $(document).ready(function() {
       format: 'd-m-Y',
       calendars: 2,
       mode: 'multiple',
-      legend: "<div class='legend_booked'></div> = unavailable",
+      legend: "<div class='legend_booked'></div> = Unavailable",
       onRender: function(date) {
     		return {
     			disabled: true,
