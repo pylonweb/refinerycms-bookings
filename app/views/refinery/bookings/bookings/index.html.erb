@@ -16,11 +16,6 @@
 		
 </section>
 
-<%# html.slice!(-1) %>
-<%#= raise html.inspect %>
-<%#= raw html.concat(['<div id="calendar"></div>', '</section>']).join() %>
-	
-
 <% content_for :javascripts do %> 
  <%= javascript_include_tag('refinery/bookings/datepicker') %>
  <%= javascript_include_tag('refinery/bookings/frontend') %>
