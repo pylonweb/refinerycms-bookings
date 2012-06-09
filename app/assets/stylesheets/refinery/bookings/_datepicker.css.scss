@@ -3,6 +3,12 @@ $selected_color_not_in_month: #94CBF2;
 $booked_color: #ee1100;
 .datepicker {
   text-align: center;
+  
+  .datepickerContainer{
+    padding: 5px;
+    border: 1px solid #000;
+  }
+  
   table {
     height: 135px;
     width: 176px;
