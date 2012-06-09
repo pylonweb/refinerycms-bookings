@@ -8,7 +8,7 @@ en:
         bookings:
           actions:
             actions: Actions
-            book: Mark selected as occupied
+            book: Mark selected as unavailable
             release: Release selected
           calendar:
             title: Bookings
