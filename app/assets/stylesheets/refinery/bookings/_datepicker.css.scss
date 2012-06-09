@@ -134,20 +134,19 @@ $booked_color: #ee1100;
 
   .datepickerContainer {
     >table{
-      td:last-child{
-        .datepickerGoNext{
-          visibility: visible;
-        }
+      
+      .datepickerGoPrev{
+        visibility: hidden;
       }
 
       td:first-child{
         .datepickerGoPrev{
           visibility: visible;
         }
-      }
-
-      .datepickerGoPrev, .datepickerGoNext{
-        visibility: hidden;
+        
+        .datepickerGoNext{
+          visibility: hidden;
+        }
       }
     }
   }
