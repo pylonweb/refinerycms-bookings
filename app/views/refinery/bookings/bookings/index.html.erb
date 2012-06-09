@@ -7,7 +7,7 @@
 		</div>
 	</section>
 	<% @page.parts.reject{|p| p.title == "Body"}.each do |part| %>
-		<section id="<%= part.title %>">
+		<section id="<%= part.title.downcase %>">
 			<div class="inner">
 				<%= raw @page.content_for(part.title) %>
 			</div>
