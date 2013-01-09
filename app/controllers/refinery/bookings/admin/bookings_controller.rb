@@ -2,6 +2,7 @@ module Refinery
   module Bookings
     module Admin
       class BookingsController < ::Refinery::AdminController
+        cache_sweeper Bookings::BookingSweeper
         
         def index
           @bookings = Booking.all
